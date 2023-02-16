@@ -17,6 +17,13 @@ app.use(express.json());
 // app.use(cors());
 app.use(cors({origin: '*'}));
 app.use(morgan('tiny'));
+app.use(
+    "/graphql",
+    graphqlHTTP({
+      schema,
+      graphiql: true
+    })
+  );
 app.disable('x-powered-by'); // less hackers know about our stack
 
 const port = 3000;

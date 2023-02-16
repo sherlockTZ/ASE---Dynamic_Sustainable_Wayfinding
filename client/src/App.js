@@ -12,7 +12,10 @@ import Reset from './components/reset';
 import PageNotFound from './components/pageNotFound';
 // import PublictransTest from './components/publictranstest';
 import PublicTransportIRE from './components/publicTransportIRE';
-
+import RelayEnvironment from './RelayEnvironment'
+const { Suspense, SuspenseList } = React
+const { Meta } = Card
+const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth'
