@@ -9,9 +9,9 @@ import connect from './database/connection.js';
 import auth from './routes/authentication.js';
 import publicTransportIre from './routes/pubtrans.js';
 
-
+const graphqlHTTP = require("express-graphql");
 const app = express();
-
+const { getAndSaveUser, getAndSaveActivities } = require("./services/fetchService");
 /** middlewares */
 app.use(express.json());
 // app.use(cors());
